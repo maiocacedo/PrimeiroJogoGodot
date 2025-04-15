@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bohdj5qbbhhcs"]
+
+[ext_resource type="Script" uid="uid://d26ar8ddyqt1u" path="res://Scenes/Management/portal.gd" id="1_jx3xq"]
+[ext_resource type="Texture2D" uid="uid://b6t36aov8wqku" path="res://Assets/Items/Checkpoints/End/End (Idle).png" id="1_wxucl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx3xq"]
+size = Vector2(34, 42)
+
+[node name="Portal" type="Area2D"]
+script = ExtResource("1_jx3xq")
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_wxucl")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_jx3xq")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]

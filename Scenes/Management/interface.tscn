@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfq8yhqgff82d"]
+
+[ext_resource type="FontFile" uid="uid://c1t15b1mrxcdl" path="res://Assets/Retro Gaming.ttf" id="1_bcjxv"]
+[ext_resource type="Script" uid="uid://bnn7w03shknhc" path="res://Scenes/Management/interface.gd" id="1_qgylx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qgylx"]
+font = ExtResource("1_bcjxv")
+font_size = 20
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+
+[node name="Interface" type="CanvasLayer" groups=["interface"]]
+script = ExtResource("1_qgylx")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 20.0
+offset_right = 369.0
+offset_bottom = 61.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Score: 99999999"
+label_settings = SubResource("LabelSettings_qgylx")
+
+[node name="Health" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -101.0
+offset_top = 20.0
+offset_right = -32.0
+offset_bottom = 46.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "25 HP"
+label_settings = SubResource("LabelSettings_qgylx")
